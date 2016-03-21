@@ -19,6 +19,7 @@ div {
     display: block;
     margin-bottom: 20px;
     font-size: 2.5em;
+    clear: both;
 }
 
 p {
@@ -27,7 +28,7 @@ p {
 
 /* Features (coloured background) */
 .feature {
-
+    vertical-align: middle;
 }
 
 #feature1 {
@@ -36,6 +37,10 @@ p {
 
 #feature2 {
     background-color: #FFB347;
+}
+
+.feature .subheading {
+    margin-top: 100px;
 }
 
 /* Photos (examples, photo backgrounds) */
@@ -63,34 +68,42 @@ p {
 
 /* Speech */
 .speech {
-    display: inline-block;
+    display: block;
+    clear: both;
     max-width: 80%;
     margin-bottom: 10px;
     
     padding: 7px 14px;
     border-radius: 20px;
-    clear: both;
     
     font-size: 1.3em;
 }
 
-.speech:first-child {
+.feature .speech:first-child {
+    margin-top: 100px;
+}
+
+.feature .speech:last-child {
+    margin-bottom: 100px;
+}
+
+.photo .speech:first-child {
     margin-top: 200px;
 }
 
-.speech:last-child {
+.photo .speech:last-child {
     margin-bottom: 200px;
 }
 
 /* Speech to Weather Lad */
 .to {
     float: right;
-    
     background-color: #FDFD96;
 }
 
 /* Speech from Weather Lad */
 .from {
+    float: left;
     color: white;
     background-color: #FF6961;
 }
