@@ -9,6 +9,14 @@ div {
     background-color: #77DD77;
 }
 
+#header #logo {
+    text-align: center;
+}
+
+#header #logo img {
+    max-width: 90%;
+}
+
 #heading {
     display: block;
     margin-bottom: -20px;
@@ -82,8 +90,17 @@ p:last-child {
     margin-top: 200px;
 }
 
+.photo .subheading:first-child {
+    margin-top: 200px;
+}
+
 .photo .speech:last-child {
     margin-bottom: 200px;
+}
+
+.photo p:last-child {
+    margin-bottom: 200px;
+    padding-bottom: 0;
 }
 
 /* Speech to Weather Lad */
@@ -116,6 +133,14 @@ p:last-child {
 
 .say input:focus {
     outline: none;
+}
+
+#documentation .subheading {
+    margin-top: 100px;
+}
+
+#documentation p {
+    padding-bottom: 0;
 }
 
 footer {

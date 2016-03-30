@@ -30,8 +30,8 @@
             <div class="container">
                 <!-- Header -->
                 <div class="row">
-                    <div class="col-md-5">
-                        <img src="images/logo.png" height="400px">
+                    <div class="col-md-5" id="logo">
+                        <img src="images/logo.png">
                     </div>
                     <div class="col-md-7">
                         <span id="heading">Weather Lad</span>
@@ -110,7 +110,6 @@
                             Looks like Friday after work at Lyall Bay could be good, warm too at 24. Check again on Friday morning.
                         </div>
                     </div>
-                    <!-- Photo of dude checking phone with surfboard -->
                 </div>
             </div>
         </div>
@@ -141,6 +140,18 @@
             </div>
         </div>
         
+        <!-- Laptop -->
+        <div class="photo" data-parallax="scroll" data-image-src="images/accessible.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-6">
+                        <span class="subheading">Accessible</span>
+                        <p>As a standalone website Weather Lad can be viewed on any smartphone, tablet or desktop. Optimised for speed and ease of use Weather Lad is always there when you need it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div class="feature" id="featuretry">
             <div class="container">
                 <!-- Feature -->
@@ -161,10 +172,21 @@
             </div>
         </div>
         
-        <div class="feature">
+        <div id="documentation">
             <div class="container">
-                <span class="subheading">Technical Considerations</span>
-                <p>Weather Lad will be designed to be used on mobile, tablet and desktop screens with different considerations in mind. The mobile layout will proritise the conversational aspect with the input box being the focal point. Whereas with the desktop layout the focus will be on the display of weather data. The desktop layout will likely most commonly be used as a screensaver.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="subheading">Accessibility</span>
+                        <p>Weather Lad will be designed to be used on mobile, tablet and desktop screens with different considerations in mind. The mobile layout will prioritise the conversational aspect with the input box being the focal point. Whereas with the desktop layout the focus will be on the display of weather data. The desktop layout will likely most commonly be used as a screensaver.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="subheading">Sensors</span>
+                        <p>The GPS sensor of the phone, tablet or laptop viewing the website will be used to determine the user's location. No other sensors are really necessary for the operation of the website. The accelerometer and/or compass data could be used for enhancing the website aesthetically. However, they will not really enhance the website technically.
+</p>
+                    </div>
+                </div>
+                <span class="subheading">Challenges</span>
+                <p>The most obvious difficulty is getting Weather Lad to understand what the user is saying. I have a couple of ideas as to how this could work. The most achievable method I feel is to have a set of words that Weather Lad will recognise. For example, it will need to understand a set of weather words (rain, cloud, sun, etc), a set of clothing words (jacket, t-shirt, jersey, etc), and a bunch of others. Each message will be scanned for the aforementioned set of words.</p>
             </div>
         </div>
         
