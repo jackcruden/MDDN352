@@ -176,16 +176,31 @@
         
         <!-- Demo -->
         <script>
+            var responses = [
+                "Hmm, I'm not sure how to respond.",
+                "Unfortunately, I'm, pretty dumb at the moment. I'm learning, though!",
+                "One day I'll be useful...",
+                "Sorry, can't help you there."
+            ];
+            
             $('#saySomething input').keyup(function(event) {
                 // If not enter, ignore
                 if (event.keyCode != 13) return;
                 
                 // Construct the speech box
-                var newMessage = $('<div class="speech to"></div>');
+                var toMessage = $('<div class="speech to"></div>');
                 
-                // Insert the user's message
-                newMessage.html($('#saySomething input').val());
-                //alert($('#saySomething input').val());
+                // Insert the user's message and clear the input box
+                toMessage.html($('#saySomething input').val());
+                toMessage.insertBefore($('#saySomething'));
+                $('#saySomething input').val('');
+                
+                // Choose a random response
+                var fromMessage = $('<div class="speech from"></div>');
+                fromMessage.html(responses[Math.floor((Math.random() * responses.length) + 0)]);
+                setTimeout(function() {
+                    fromMessage.insertBefore($('#saySomething'));
+                }, 1000);
             });
         </script>
     </body>
