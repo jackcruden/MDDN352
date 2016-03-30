@@ -16,7 +16,7 @@
         
         <!-- Google Font Raleway -->
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-
+        
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -43,11 +43,11 @@
         </div>
         
         <!-- Lady leaving home -->
-        <div class="photo" id="photo1">
+        <div class="photo" data-parallax="scroll" data-image-src="images/student.jpg">
             <div class="container">
                 <div class="row">
                     <!-- Photo of lady leaving house checking phone -->
-                    <div class="col-sm-5 col-sm-offset-7">
+                    <div class="col-sm-5">
                         <div class="speech to">
                             Will I need a jacket today?
                         </div>
@@ -66,9 +66,14 @@
             <div class="container">
                 <!-- Feature -->
                 <div class="row">
+                    <div class="col-sm-6 col-sm-offset-1">
+                        <span class="subheading">Conversational</span>
+                        <p>For a pesonalised experience users can teach Weather Lad their nickname and location. Once learnt, Weather Lad will use the user's location data to provide accurate weather information.</p>
+                        <p>Over time Weather Lad will learn the user's common queries and begin providing contextualised information without prompt.</p>
+                    </div>
                     <div class="col-sm-5">
                         <div class="speech from">
-                            Hey, I don't believe we've met before. I'm Weather Lad, what should I call you?
+                            Hey, I don't believe we've met before. I'm Weather Lad, what can I call you?
                         </div>
                         <div class="speech to">
                             Hi Weather Lad, I'm Jack.
@@ -83,17 +88,12 @@
                             Sweet, we're all set up and ready to go!
                         </div>
                     </div>
-                    <div class="col-sm-6 col-sm-offset-1">
-                        <span class="subheading">Conversational</span>
-                        <p>For a pesonalised experience users can teach Weather Lad their nickname and location. Once learnt, Weather Lad will use the user's location data to provide accurate weather information.</p>
-                        <p>Over time Weather Lad will learn the user's common queries and begin providing contextualised information without prompt.</p>
-                    </div>
                 </div>
             </div>
         </div>
         
         <!-- Guy checking surf -->
-        <div class="photo" id="photo2">
+        <div class="photo" data-parallax="scroll" data-image-src="images/surfer.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-5">
@@ -141,12 +141,41 @@
             </div>
         </div>
         
-        <footer>
-            This is the footer.
+        <div class="feature" id="featuretry">
+            <div class="container">
+                <!-- Feature -->
+                <div class="row">
+                    <div class="col-sm-5">
+                        <span class="subheading">Try me!</span>
+                        <p>This is most certainly just a proof-of-concept but it gives an idea of what a user might expect from Weather Lad. Try introducing yourself and asking about the weather.</p>
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <div class="speech from">
+                            Hey there! What's your name?
+                        </div>
+                        <div class="speech say">
+                            <input type="text" placeholder="Say something...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="container text-center">
+            &copy; 2016 <a href="http://jackcruden.com">Jack Cruden</a>
         </footer>
         
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Parallax -->
+        <script src="js/parallax.min.js"></script>
+        <!-- Skrollr -->
+<!--
+        <script src="js/skrollr.js"></script>
+        <script type="text/javascript">
+            var s = skrollr.init();
+        </script>
+-->
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </body>

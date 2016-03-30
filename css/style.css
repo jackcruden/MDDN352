@@ -23,7 +23,12 @@ div {
 }
 
 p {
+    display: block;
     font-size: 1.5em;
+}
+
+p:last-child {
+    padding-bottom: 100px;
 }
 
 /* Features (coloured background) */
@@ -39,6 +44,10 @@ p {
     background-color: #FFB347;
 }
 
+#featuretry {
+    background-color: #63E9FC;
+}
+
 .feature .subheading {
     margin-top: 100px;
 }
@@ -46,24 +55,6 @@ p {
 /* Photos (examples, photo backgrounds) */
 .photo {
     
-}
-
-/* Student */
-#photo1 {
-    background: url(/images/student.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-/* Surfer */
-#photo2 {
-    background: url(/images/surfer.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 /* Speech */
@@ -108,6 +99,26 @@ p {
     background-color: #FF6961;
 }
 
+/* Say something */
+.say {
+    float: none;
+    max-width: none;
+    background-color: #a2ff85;
+}
+
+.say input {
+    background-color: inherit;
+    border-width: 0;
+    border: none;
+    width: 100%;
+    box-shadow: 0;
+}
+
+.say input:focus {
+    outline: none;
+}
+
 footer {
-    min-height: 1000px;
+    min-height: 80px;
+    padding: 30px;
 }
