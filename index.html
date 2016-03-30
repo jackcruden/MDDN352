@@ -161,7 +161,7 @@
                         <p>Weather Lad is still learning and has a long way to go. This is mostly just a proof-of-concept.</p>
                     </div>
                     <div class="col-sm-5 col-sm-offset-1">
-                        <div class="speech from">
+                        <div class="speech from" id="firstMessage">
                             Hey there! What's your name?
                         </div>
                         <div class="speech say" id="saySomething">
@@ -203,8 +203,14 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         
-        <!-- Demo -->
+        <!-- Location and demo -->
         <script>
+            var city = '';
+            
+            $.get("http://ipinfo.io", function(response) {
+                $('#firstMessage').html("Hey there, looks like you're in " + response.city + ". What's your name?");
+            }, "jsonp");
+        
             var responses = [
                 "Hmm, I'm not sure how to respond.",
                 "Unfortunately, I'm, pretty dumb at the moment. I'm learning, though!",
