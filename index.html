@@ -153,7 +153,7 @@
                         <div class="speech from">
                             Hey there! What's your name?
                         </div>
-                        <div class="speech say">
+                        <div class="speech say" id="saySomething">
                             <input type="text" placeholder="Say something...">
                         </div>
                     </div>
@@ -167,17 +167,27 @@
         
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
         <!-- Parallax -->
         <script src="js/parallax.min.js"></script>
-        <!-- Skrollr -->
-<!--
-        <script src="js/skrollr.js"></script>
-        <script type="text/javascript">
-            var s = skrollr.init();
-        </script>
--->
+        
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        
+        <!-- Demo -->
+        <script>
+            $('#saySomething input').keyup(function(event) {
+                // If not enter, ignore
+                if (event.keyCode != 13) return;
+                
+                // Construct the speech box
+                var newMessage = $('<div class="speech to"></div>');
+                
+                // Insert the user's message
+                newMessage.html($('#saySomething input').val());
+                //alert($('#saySomething input').val());
+            });
+        </script>
     </body>
 
 </html>
